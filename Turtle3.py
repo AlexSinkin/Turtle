@@ -13,7 +13,7 @@ def square (l: int):
     turtle.pendown()
     return
 
-l=10
+l = 10
 for x in range(10):
     square(l)
-    l=l+20
+    l += 20
