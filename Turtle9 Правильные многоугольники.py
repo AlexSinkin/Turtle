@@ -1,4 +1,4 @@
-,from math import *
+from math import *
 import turtle as tt
 
 n = 10
