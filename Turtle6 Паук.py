@@ -1,7 +1,7 @@
 import turtle as tt
 
-tt.shape('turtle')
 x = int(input("Количество лучей: "))
+tt.shape('turtle')
 for i in range(x):
     tt.forward(100)
     tt.right(180)
