@@ -1,5 +1,7 @@
 import turtle
 
+turtle.shape('turtle')
+
 
 def move_turtle(cmd):
     if cmd == 'F':
@@ -16,19 +18,19 @@ def kokh_star(moves_in, n):
         return moves_in
     else:
         moves_out = []
-        for move in moves_in:
-            if move == 'F':
+        for move1 in moves_in:
+            if move1 == 'F':
                 moves_out.extend(kokh_star(('F', 'L', 'F', 'R', 'F', 'L', 'F'), n - 1))
             else:
 
-                moves_out.append(move)
+                moves_out.append(move1)
     return moves_out
 
 
 # начальные значения
 
-n = 2
-a = int(500 / (3 ** n))
+m = 2
+a = int(500 / (3 ** m))
 
 turtle.Screen().setup(1000, 800, 0, 0)
 
@@ -37,7 +39,7 @@ turtle.goto(-200, 200)
 turtle.pendown()
 
 # Launch turtle
-for move in kokh_star(('F', 'R', 'F', 'R', 'F'), n):
+for move in kokh_star(('F', 'R', 'F', 'R', 'F'), m):
     move_turtle(move)
 
 turtle.Screen().exitonclick()
